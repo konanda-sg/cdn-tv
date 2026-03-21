@@ -145,17 +145,19 @@ channels_data = [
     {"name":"Astro Premier League","code":"us","url":"https://cdn-live.tv/api/v1/channels/player/?name=astro+premier+league&code=us&user=cdnlivetv&plan=free","image":"https://api.cdn-live.tv/api/v1/channels/images6318/united-states/astro-premier-league.webp","status":"online","viewers":0},
     {"name":"Astro Premier League 2","code":"us","url":"https://cdn-live.tv/api/v1/channels/player/?name=astro+premier+league+2&code=us&user=cdnlivetv&plan=free","image":"https://api.cdn-live.tv/api/v1/channels/images6318/united-states/astro-premier-league-2.webp","status":"online","viewers":0}
 ]
+referer_url = "https://edge.cdn-live.ru/"
 
 with open("siamcdnplaylist.m3u", "w") as f:
     f.write('#EXTM3U x-tvg-url="https://github.com/epgshare01/share/raw/master/epg_ripper_ALL_SOURCES1.xml.gz"\n')
     for channel in channels_data:
         print(f"Processing {channel['name']}...")
-        m3u8_url = get_m3u8_url(channel['url'], 'https://edge.cdn-live.ru/')
+        m3u8_url = get_m3u8_url(channel['url'], referer_url)
         if m3u8_url:
             name = channel['name']
             code = channel['code']
             logo = channel['image']
             f.write(f'#EXTINF:-1 tvg-id="{code}" tvg-name="{name}" tvg-logo="{logo}",{name}\n')
+            f.write(f'#EXTVLCOPT:http-referrer={referer_url}\n')
             f.write(f"{m3u8_url}\n")
 
 print("Playlist created successfully.")
