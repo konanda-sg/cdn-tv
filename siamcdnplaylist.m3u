@@ -1,6 +1,9 @@
 #EXTM3U x-tvg-url="https://github.com/epgshare01/share/raw/master/epg_ripper_ALL_SOURCES1.xml.gz"
 #EXTINF:-1 tvg-id="us" tvg-name="Astro Cricket" tvg-logo="https://api.cdn-live.tv/api/v1/channels/images6318/united-states/astro-cricket.webp",Astro Cricket
 #EXTVLCOPT:http-referrer=https://edge.cdn-live.ru/
+#EXTINF:-1 tvg-id="us" tvg-name="siam test" tvg-logo="https://api.cdn-live.tv/api/v1/channels/images6318/united-states/astro-cricket.webp",siamtest
+http://103.144.89.251:8082/T-SPORTS-HD/index.m3u8?token=ca119e0a1a307c6507850ce24e17a4304ab564d9-1a0593830f52ec2a631c4900219c62d3-1774962300-1774951500&remote=no_check_ip
+
 https://edge.cdn-live.ru/secure/api/v1/us-astro-cricket/playlist.m3u8?token=3d4e8cf5848f501c0e509d607b43e1f2b1a57ef20749806f2b14276085bbd876.1774949860.94759d670d12d085249ce149874b918f.49dceeab8c4da516a1ea13110ca58358.5ac897dfad3fbe167cb701eb36e66fb6&signature=a0a835952167876bc57516f09036aef1dc85e9996aac387f5de1e32b2e33c0bf
 #EXTINF:-1 tvg-id="us" tvg-name="Astro Football" tvg-logo="https://api.cdn-live.tv/api/v1/channels/images6318/united-states/astro-football.webp",Astro Football
 #EXTVLCOPT:http-referrer=https://edge.cdn-live.ru/
